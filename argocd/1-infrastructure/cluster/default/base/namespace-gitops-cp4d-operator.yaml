@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespace-gitops-cp4d-operator
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: 1-infrastructure
+  source:
+    path: payload/1-infrastructure/namespace/gitops-cp4d-operator/namespace
+    repoURL: https://github.com/cloud-native-toolkit-test/gitops-cp4d-operator
+    targetRevision: gitops-cp4d-operator-payload
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
