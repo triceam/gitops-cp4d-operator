@@ -1,0 +1,6 @@
+"cp4d":
+  "cpd_namespace": "cpd"
+  "cpd_platform_channel": "v2.0"
+  "cpd_platform_version": "4.0.2"
+  "operator_namespace": "gitops-cp4d-operator"
+
